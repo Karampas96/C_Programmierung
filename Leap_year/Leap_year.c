@@ -1,48 +1,55 @@
-/*****************************************************************************
-FILE : Leap_year.c
+/*******************************************************************************
+* Programm:
+* Filename:   Leap_year.c
+*
+* Autor:      Ioannis Christodoulakis (IC)
+* Version:    1.0
+* Datum:
+*
+* Entwicklungsablauf(Version, Datum, Autor, Entwicklungsschritt, Zeit):
+* 1.0     04.09.2020    IC    Erste Erstellung    2 Std.         
+* 1.1     04.09.2020    IC    Format ändern       10 Min.
+********************************************************************************
+*
+* Verwendungszweck: C-Schulung
+*
+* Beschreibung:
+* Entwickeln Sie ein Programm welches zu jedem eingegebenen Jahr mitteilt, ob 
+* es sich um ein Schaltjahr handelt oder nicht.
+*
+* Benötigte Libraries:
+* - stdlib.h
+* - stdio.h
+*
+* Copyright (c) 2013 by I.Christodoulakis, CH-6340 Baar
+*******************************************************************************/
 
-VERSION  DATE	    PROGRAMMER	REMARKS
-
-USED BY 
-  C-Kurs / Grundlagen
-
-DESCRIPTION
-  This is a template file for simple C programs.
-
-COPYRIGHT (C) 2020  by I.Christodoulakis  CH-6340 Baar
-*****************************************************************************/
-/* IMPORT ---------------------- */
-#include <stdio.h>
+/***  Include Files ***********************************************************/
+#include <stdio.h> /* Funktionsbibliothek: Standard Ein- Ausgabe */
 #include <stdlib.h> /* Funktionsbibliothek: Hilfsfunktionen */
 
-/* KONSTANTEN ------------------ */
-
-/* VARIABLEN (global) ---------- */
-
-/* HAUPTPROGRAMM --------------- */
+/*******************************************************************************
+******************************* HAUPTPROGRAMM **********************************
+*******************************************************************************/
 int main() {
-   int year;
-   printf("Enter a year: ");
-   scanf("%d", &year);
+  // lokale Variablen
+  int year;
+  /* Eingabe ------------------- */
+  printf("Enter a year: ");
+  scanf("%d", &year);
 
-   // leap year if perfectly visible by 400
-   if (year % 400 == 0) {
-      printf("%d is a leap year.", year);
-   }
-   // not a leap year if visible by 100
-   // but not divisible by 400
-   else if (year % 100 == 0) {
-      printf("%d is not a leap year.", year);
-   }
-   // leap year if not divisible by 100
-   // but divisible by 4
-   else if (year % 4 == 0) {
-      printf("%d is a leap year.", year);
-   }
-   // all other years are not leap year
-   else {
-      printf("%d is not a leap year.", year);
-   }
-
-   return 0;
+  /* Verarbeitung und Ausgabe-------------- */
+  if (year % 400 == 0) {
+     printf("%d is a leap year.", year);
+  }
+  else if (year % 100 == 0) {
+     printf("%d is not a leap year.", year);
+  }
+  else if (year % 4 == 0) {
+     printf("%d is a leap year.", year);
+  }
+  else {
+     printf("%d is not a leap year.", year);
+  }
+  return (0);
 }
