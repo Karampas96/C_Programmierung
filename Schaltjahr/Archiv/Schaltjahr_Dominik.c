@@ -21,7 +21,7 @@
 *
 * Postcondition: -
 *
-* Benötigte Libraries:
+* BenÃ¶tigte Libraries:
 * - stdlib.h
 * - stdio.h
 *
