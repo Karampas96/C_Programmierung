@@ -1,10 +1,10 @@
 /*******************************************************************************
 * Programm:
-* Filename:   .c
+* Filename:   main.c
 *
 * Autor:      Ioannis Christodoulakis (IC)
 * Version:    1.0
-* Datum:
+* Datum:      04.09.2020
 *
 * Entwicklungsablauf(Version, Datum, Autor, Entwicklungsschritt, Zeit):
 * 1.0
@@ -15,11 +15,16 @@
 *
 * Beschreibung:
 *
+* Precondition:  -
+*
+* Postcondition: -
+*
 * Benötigte Libraries:
+*
 * - stdlib.h
 * - stdio.h
 *
-* Copyright (c) 2013 by I.Christodoulakis, CH-6340 Baar
+* Copyright (c) 2020 by I.Christodoulakis, CH-6340 Baar
 *******************************************************************************/
 
 /***  Include Files ***********************************************************/
@@ -41,16 +46,16 @@ int main(void) {
 
 
 
-  /* Intro --------------------- */
+  /* Intro -------------------------------- */
 
 
-  /* Eingabe ------------------- */
+  /* Eingabe ------------------------------ */
 
 
-  /* Verarbeitung und Ausgabe -------------- */
+  /* Verarbeitung und Ausgabe ------------- */
 
 
-  /* Ausgabe ------------------- */
+  /* Ausgabe ------------------------------ */
 
   return (0);
 }
