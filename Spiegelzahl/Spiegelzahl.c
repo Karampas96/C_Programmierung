@@ -1,14 +1,14 @@
 /*******************************************************************************
-* Programm: Spiegelzahl                                                                      
+* Programm:   Spiegelzahl                                                                      
 * Filename:   Spiegelzahl.c
 *			   									   
 * Autor:      Ioannis Christodoulakis		   								   									   
 * Version:    1.0				   			   								   									   
-* Datum:      16.3.2017
+* Datum:      04.09.2020
 *
 * Entwicklungsablauf(Version, Datum, Autor, Entwicklungsschritt, Zeit):
-* 1.0 16.3.17 Ioannis Christodoulakis Ganzes Programm erstellt 15 Min.
-*                                                         Totalzeit: 15 Min.   						   									   
+* 1.0 04.09.20 Ioannis Christodoulakis Erste Erstellung 90 Min.
+* 						   									   
 ********************************************************************************
 *
 * Verwendungszweck: C-Schulung
@@ -26,7 +26,7 @@
 * - stdlib.h
 * - stdio.h
 *
-* Copyright (c) 2017 by I.Christodoulakis, CH-6340 Baar
+* Copyright (c) 2020 by I.Christodoulakis, CH-6340 Baar
 *******************************************************************************/
 
 /***  Include Files ***********************************************************/
