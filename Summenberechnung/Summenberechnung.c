@@ -46,9 +46,9 @@
 int main(void) {
 
   // lokale Variablen
-  int Zahl1;
-  int Zahl2;
-  int Summe;
+  int Zahl1; // erste einzugebende Ganzzahl
+  int Zahl2; // zweite einzugebende Ganzzahl
+  int Summe; // Summe der Variablen: Zahl1 und Zahl2
 
   /* Intro -------------------------------- */
   printf("Summenberechnungs-Programm\n\n");
