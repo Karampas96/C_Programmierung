@@ -1,6 +1,6 @@
 /*******************************************************************************
 * Programm:
-* Filename:   Leap_year.c
+* Filename:   Schaltjahr.c
 *
 * Autor:      Ioannis Christodoulakis (IC)
 * Version:    1.0
