@@ -14,8 +14,8 @@
 * Verwendungszweck: C-Schulung
 *
 * Beschreibung:
-* Entwickeln Sie ein Programm welches zu jedem eingegebenen Jahr mitteilt, ob 
-* es sich um ein Schaltjahr handelt oder nicht.
+* In diesem Programm kann eine Jahreszahl eingegebgen werden, um herauszu-
+* finden ob diese Jahr ein Schaltjahr ist.
 *
 * Benötigte Libraries:
 * - stdlib.h
