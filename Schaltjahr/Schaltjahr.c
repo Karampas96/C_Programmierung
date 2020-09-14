@@ -32,8 +32,13 @@
 ******************************* HAUPTPROGRAMM **********************************
 *******************************************************************************/
 int main() {
+  
   // lokale Variablen
-  int year;
+  int year; // Einzulesendes Jahr für die Überprüfung
+  
+  /* Intro --------------------- */
+  puts("*** Schaltjahr Erkennung ***\n\n");
+  
   /* Eingabe ------------------- */
   printf("Enter a year: ");
   scanf("%d", &year);
@@ -44,5 +49,6 @@ int main() {
   else
     printf("%d ist kein Schaltjahr.", year);
   
+  system ("PAUSE"); /* Nur während der Entwicklungsphase, später löschen! */
   return (0);
-}
+}// main
