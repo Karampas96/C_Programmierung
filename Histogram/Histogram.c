@@ -26,17 +26,16 @@
 #include <stdio.h>  /* Funktionsbibliothek: Standard Ein- Ausgabe */
 #include <assert.h>
 
+/***  Global Variables ********************************************************/
+unsigned int count[256] = {0};
+
 /*******************************************************************************
 ******************************* HAUPTPROGRAMM **********************************
 *******************************************************************************/
 int main(int argc, char* argv[], char* envp[]){
 	FILE* stream = NULL;
 	char *filename="Alice Adventure in Wonderland.txt";
-	int count[256] = {0}; // @RLA: I suggest that you declare this variable as a globla variable not a local one. Like this it will consume 1K stack space. Not a problem for a modern windows laptop. 
-				// But on smaller systems it might be critical; if you want to keep it local to the function you just declare it as static!
-				// gloabl int variables will be initialized to 0.
-				// consider using types of stdint instead of int! the count will be positive in any case
-	int c; /* Ein Halter fuer jeden Buchstabe */
+	int c; /* a holder for each letter */
 	int k;
 	int max_letter = 0;
 	int char_count = 0;
