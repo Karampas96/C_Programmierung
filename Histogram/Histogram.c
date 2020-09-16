@@ -3,23 +3,11 @@
 * Filename:   Histogram.c
 *
 * Autor:      Ioannis Christodoulakis
-* Version:    1.1
+* Version:    1.2
 * Datum:      16.09.2020
 *
 * Copyright (c) 2020 by I.Christodoulakis, CH-6340 Baar
 *******************************************************************************/
-
-/**
-* @RLA: Overall comment:
-* You where very fast in finishing this assigment. 
-* There are a couple of small things we will stil learn during this lecture with respect ot constants and
-* string initialsation and manipulation.
-* you do a good job in checking error cases. Try to be more stringent and use asserts in cases
-* where things can be assumed to work under normal conditions.
-* Deep if nestings are hard to follow. You could do with less!
-*
-* good work!
-*/
 
 /***  Include Files ***********************************************************/
 #include <stdlib.h> /* Funktionsbibliothek: Hilfsfunktionen */
@@ -45,9 +33,6 @@ int main(int argc, char* argv[], char* envp[]){
 	}
 	// Open File for read
 	err = fopen_s(&stream, filename, "r");
-	//@RLA: as you can see your code gets quite deep nestings of if clauses. 
-	// i would prefer if you just made your clean up in case of an error and return in the middel of the programm
-	// overall it will be more readable
 	if (err != 0){
 		printf("\nDie Datei '%s' wurde nicht richtig geoeffnet.\n\n", filename);
 		return 1;
