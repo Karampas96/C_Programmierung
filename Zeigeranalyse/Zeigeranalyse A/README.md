@@ -2,11 +2,11 @@
 
 ## Ziel
 
-Der Schüler kann einfache Zeigermanipulationen korrekt analysieren
+Einfache Zeigermanipulationen korrekt analysieren.
 
 ## Problemstellung
 
-Folgender kleine Programmausschnitt sei gegeben:
+Folgender kleine Programmausschnitt ist gegeben:
 
 ```c
 int ZahlA = 3, ZahlB = 5;
