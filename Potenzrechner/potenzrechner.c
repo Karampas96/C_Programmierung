@@ -66,3 +66,9 @@ int main(void) {
   system ("PAUSE"); /* Nur während der Entwicklungsphase, später löschen! */
   return (0);
 }
+
+int calculatePotenz (int Basis, int Potenz) {
+ int Res;
+ Res = Basis ^ Potenz;
+ return Res;
+}
