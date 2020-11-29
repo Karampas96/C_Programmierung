@@ -2,7 +2,7 @@
 
 ## 1 Einleitung
 
-![SUDOKU](image\SUDOKU.PNG)
+![SUDOKU](image/SUDOKU.PNG)
 
 In vielen Zeitschriften finden Sie Denksportaufgaben wie das dargestellte SUDOKU-Zahlenrätsel.
 
