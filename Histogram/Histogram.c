@@ -1,4 +1,5 @@
-// This file contains the 'main' function. Program execution begins and ends there.
+// Histogram1.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
 
 #include <string.h>
 #include <stdio.h>
@@ -11,7 +12,7 @@
 uint32_t FindMaxFrequentElement(const uint32_t* histogram, uint32_t size, uint32_t* index );
 
 uint32_t histogram[256];
-const char *path = "C:\Users\Ioannis\Desktop\Github_Repos\C\Histogram\";
+const char *path = "C:\\Users\\rolfl\\OneDrive - GIBZ\\HFIE\\StrukturierteProgrammierung\\Übungsmaterial\\";
 char pathBuffer[1024];
 
 //int main()
