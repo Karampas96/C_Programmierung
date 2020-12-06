@@ -1,5 +1,7 @@
 # Bubblesort
 
+![Bubblesort](images/Bubblesort.PNG)
+
 ## 1 Einleitung
 
 Der Sortieralgorithmus Bubblesort (Blasensortierung) arbeitet nach dem Prinzip, dass sas Feld durchlaufen wird, und dabei so geatauscht wird, dass das grösste bzw. kleinste Element an der richtigen Stelle steht.
