@@ -5,8 +5,9 @@
 Arbeitet man sehr nahe an der Hardwareschicht, so werden BCD-Zahlen öfters verwendet. Damit ein Entwickler nicht jedes Mal eine Ganzzahl im Kopf umwandeln muss werden Rechner eingesetzt, welche eine Zahlenumwandlung in BCD vornehmen können.
 
 Beispiel einer Zahlenumwandlung:
-*Ganzzahl = 6397*
-*BCD-Zahl = 0110 0011 1001 0111*
+
+- *Ganzzahl = 6397*
+- *BCD-Zahl = 0110 0011 1001 0111*
 
 Ziel dieser Aufgabe ist einen solchen Umwandlungsrechner zu programmieren.
 
