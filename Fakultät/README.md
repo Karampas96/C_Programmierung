@@ -2,7 +2,11 @@
 
 ## 1 Einleitung
 
-In der Mathematik und auf Taschenrechner sieht man immer wieder die folgende Symbolik: `x!`.
+In der Mathematik und auf Taschenrechner sieht man immer wieder die folgende Symbolik: 
+
+```none
+x!
+```
 
 Diese Symbolik steht für die Fakultät der Zahl x. Unter diesem Begriff versteht man folgende Mathematische Erklärung:
 
