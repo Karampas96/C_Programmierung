@@ -4,8 +4,17 @@
 
 In der Primarschule haben Sie den Begriff "Quersumme" kennen gelernt. Wir wollen nun ein Programm entwickeln, welches die Quersumme einer Zahl berechnet. Damit wir aber alle das gleiche unter einer Quersumme verstehen, sollen zuerst die folgenden Definitionen festgelegt werden:
 
-**Einfache Quersumme**: `9673 = 9 + 6 + 7 + 3 = 25`
-**Totale Quersumme**: `9673 = 9 + 6 + 7 + 3 = 25; 25 = 2 + 5 = 7`
+**Einfache Quersumme**:
+
+```none
+9673 = 9 + 6 + 7 + 3 = 25
+```
+
+**Totale Quersumme**:
+
+```none
+9673 = 9 + 6 + 7 + 3 = 25; 25 = 2 + 5 = 7
+```
 
 ## 2 Aufgabenstellung
 
