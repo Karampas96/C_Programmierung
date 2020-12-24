@@ -50,6 +50,8 @@ int main(void)
    int Ganzzahl; // Ganzzahl welche zu einer Spiegelzahl gewandelt werden muss.                                                  
    int Spiegelzahl; // Umgewandelte Ganzzahl(Resultat).
    int Ziffer; // Einzelziffer der Ganzzahl. 
+   int c = 0;
+   int i = 0;
   /* Intro --------------------- */
   printf("***SPIEGELZAHLBERECHNUNG***\n\n\n");
 
@@ -61,14 +63,25 @@ int main(void)
   Spiegelzahl = 0;
   do
   {
-    Ziffer = Ganzzahl % 10; 
+    Ziffer = Ganzzahl % 10;
+	if (Ziffer == 0 && i==0){
+		c++;
+	}
+	else{
+		i = 1;	
+	}
     Ganzzahl = Ganzzahl / 10;
     Spiegelzahl = Spiegelzahl * 10 + Ziffer;
   } while (Ganzzahl > 0);
   
+	printf("\n\nDie Spiegelzahl lautet:");
+  
+  	for(i=0; i<c; i++){
+  		printf("0");
+  	}
   
   /* Ausgabe ------------------- */
-   printf("\n\nDie Spiegelzahl lautet: %d", Spiegelzahl); 
+   printf("%d", Spiegelzahl);	
    printf("\n\n");
 
   system ("PAUSE"); /* Nur während der Entwicklungsphase, später löschen! */
