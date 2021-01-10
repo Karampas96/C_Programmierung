@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+#include<string.h>
 #define MAX_ZEILEN 4
 #define GAME_OBJ '|'
 #define MINIMUM 1
@@ -14,20 +14,24 @@ void initGame(int *zeilen);
 void displayGame(const int *zeilen, const char gameObj);
 void playWithYoda();
 int checkInput(const int *zeilen, const int maxLimit, const char* msg, const int rowFlag);
-short gameOver(const int *zeilen);
+short endOfGame(const int *zeilen);
 void showWinner(const char *winner);
 
 int main(){
-    char choice;
+    char answer[5];
     introGame();
-    printf("\nDo you want to play with me? y/n: ");
-    scanf("%c", &choice);
-    if (choice == 'y'){
+    printf("\nDo you want to play with me? yes/no: ");
+    scanf("%s", answer);
+    
+    if (strcmp(answer, "yes") == 0){
         playWithYoda();
     }
-    else{
+    else if (strcmp(answer, "no") == 0){
         printf("\nGoodbye...\n");
     }
+    else{
+    	printf("\nInvalid answer...\n");
+	}
     return 0;
 }
 
@@ -88,7 +92,7 @@ void playWithYoda(){
         zeilen[rowChoice] -= removeCount;
         //player = (player == 1)? 2 : 1;
         // Yoda turn goes in the following if block
-        if(player == 2 && gameOver(zeilen) != 1){
+        if(player == 2 && endOfGame(zeilen) != 1){
             system("cls");
             displayGame(zeilen, gameObj);
             printf("\n\nYoda has decided the move! Press enter to find what Yoda is going to play...");
@@ -97,7 +101,7 @@ void playWithYoda(){
             fflush(stdin);
             player = (player == 1)? 2 : 1;
         }
-    } while(gameOver(zeilen) != 1);
+    } while(endOfGame(zeilen) != 1);
     if(player == 1){
         showWinner("You");
     }
@@ -106,24 +110,24 @@ void playWithYoda(){
     }
 }
 
-int checkInput(const int *zeilen, const int maxLimit, const char* msg, const int rowFlag){
+int checkInput(const int *zeilen, const int max, const char* msg, const int rowFlag){
     int input;
-    short invalidInput = 1;
+    short invalid = 1;
     do{
             printf(msg);
             fflush(stdin);
             scanf("%d", &input);
-            if(input < MINIMUM || input > maxLimit || (rowFlag == FLAG && zeilen[--input] < MINIMUM)){
+            if(input < MINIMUM || input > max || (rowFlag == FLAG && zeilen[--input] < MINIMUM)){
                 printf(ERROR_MSG);
             }
             else{
-                invalidInput = 0;
+                invalid = 0;
             }
-    }while(invalidInput == 1);
+    }while(invalid == 1);
     return input;
 }
 
-short gameOver(const int *zeilen ){
+short endOfGame(const int *zeilen ){
     int i;
     for(i = 0;i < MAX_ZEILEN; i++){
         if(zeilen[i] > 0){
