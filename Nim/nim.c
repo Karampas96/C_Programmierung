@@ -25,7 +25,7 @@ int main(){
     introGame();
     printf("\nDo you want to play with me? yes/no: ");
     scanf("%s", answer);
-    
+
     if (strcmp(answer, "yes") == 0){
         playWithYoda();
     }
@@ -33,9 +33,9 @@ int main(){
         printf("\nGoodbye...\n");
     }
     else{
-    	printf("\nInvalid answer...\n");
-	}
-	system ("PAUSE"); /* Nur w�hrend der Entwicklungsphase, sp�ter l�schen! */
+        printf("\nInvalid answer...\n");
+    }
+    system ("PAUSE"); /* Nur waehrend der Entwicklungsphase, spaeter loeschen! */
     return 0;
 }
 
@@ -50,15 +50,15 @@ void initGame(int *zeilearray){
     // Initialization, should only be called once.
     srand(time(NULL));
     for(i = 0;i < MAX_ZEILEN;i++){
-    	// random int between 0 and 7
+        // random int between 0 and 7
         zeilearray[i] = rand() % MAX_STAEBCHEN + 1;
     }
-	/*
-	zeilearray[0] = 3;
-	zeilearray[1] = 2;
-	zeilearray[2] = 2;
-	zeilearray[3] = 2;
-	*/
+    /*
+    zeilearray[0] = 3;
+    zeilearray[1] = 2;
+    zeilearray[2] = 2;
+    zeilearray[3] = 2;
+    */
 }
 
 void displayGame(const int *zeilearray, const char gameObj){
@@ -135,7 +135,7 @@ int checkInput(const int *zeilearray, const int max, const char* msg, const int 
 }
 
 short endOfGame(const int *zeilearray ){
-	int i;
+    int i;
     for(i = 0;i < MAX_ZEILEN; i++){
         if(zeilearray[i] > 0){
             return 0;
@@ -156,7 +156,7 @@ void AI(int *zeilearray, int *zug){
 
     for(i = 0;i < MAX_ZEILEN;i++){
         int temp = zeilearray[i];
-		// Finde die Zeile, die kein Staebchen hat
+        // Finde die Zeile, die kein Staebchen hat
         if(zeilearray[i] == 0){
             zeroes++;
         }
@@ -172,11 +172,11 @@ void AI(int *zeilearray, int *zug){
         
         //printf("\n<<< Zeile %d >>>\n", i+1);
         //printf("temp: %d\n", temp);
-		//printf("zeroes: %d\n", zeroes);
-		//printf("maxCount: %d\n", maxCount);
-		//printf("zielzeile: %d\n", zielzeile);
-	    //printf("oneRows: %d\n", oneRows);
-		
+        //printf("zeroes: %d\n", zeroes);
+        //printf("maxCount: %d\n", maxCount);
+        //printf("zielzeile: %d\n", zielzeile);
+        //printf("oneRows: %d\n", oneRows);
+
         // Es liefert die Anzahl der 2-Potenzen in jeder Zeile
         // z.B. die Zahl 7 = 111 hat ein 4, ein 2 und ein 1
         // z.B. die Zahl 5 = 101 hat ein 4 und ein 1
@@ -209,7 +209,7 @@ void AI(int *zeilearray, int *zug){
     //printf("Index vor dem for-loop: %d\n", index);
 
     for(i=MAX_ZEILEN-1; i>=0; i--){
-    	//printf("Bit array: %d\n", bitArray[i][index]);
+        //printf("Bit array: %d\n", bitArray[i][index]);
         if(bitArray[i][index] == 1){
             zielzeile = i;
             bitArray[i][index] = 0;
@@ -239,7 +239,7 @@ void AI(int *zeilearray, int *zug){
     if(maxCount == 1 && zeilearray[zielzeile] != MINIMUM){
         oneRows--;
     }
-	else if(zeilearray[zielzeile] == MINIMUM){
+    else if(zeilearray[zielzeile] == MINIMUM){
         oneRows++;
     }
     
@@ -248,7 +248,7 @@ void AI(int *zeilearray, int *zug){
     }
 
     if((zeroes + oneRows) == MAX_ZEILEN && oneRows % 2 == 1 && maxCount != MINIMUM){
-    	zeilearray[zielzeile] == 0 ? ++zeilearray[zielzeile] : --zeilearray[zielzeile];
+        zeilearray[zielzeile] == 0 ? ++zeilearray[zielzeile] : --zeilearray[zielzeile];
     }
     
     //printf("zeilearray: %d\n", zeilearray[zielzeile]);
