@@ -17,11 +17,11 @@ Entwickeln Sie ein Programm, welches zu einer eingegeben Ganzzahl eine entsprech
 
 ## 3 Schwerpunktgebiete dieser Aufgabe
 
-* Algorithmen
-* Verwendung von Kontrollstrukturen
-* Verwendung formatierter Ausgaben
+- Algorithmen
+- Verwendung von Kontrollstrukturen
+- Verwendung formatierter Ausgaben
 
 ## 4 Geforderte Lösungsbereiche
 
-* Struktogramm des Programms
-* Programmcode
+- Struktogramm des Programms
+- Programmcode

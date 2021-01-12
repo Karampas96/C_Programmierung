@@ -81,12 +81,14 @@ Problemstellung analysieren und mit geeigneten Datenstrukturen und Algorithmen e
 * Kennt die Bedeutung von Grenzwerten beim Testen und kann an Beispielen aufzeigen, wie damit die Korrektheit von Bedingungen in Programmen nachgewiesen werden kann.
 * Kennt den Aufbau eines Testprotokolls und kann an Beispielen aufzeigen, welche Ziele mit dem Testprotokoll verfolgt werden (Was, wann, von wem, wie intensiv und mit welchem Ergebnis getestet).
 
-|Vers.: |Bemerkungen:                 |Verantwortlicher: |Datum:     |
-|:------|:----------------------------|:-----------------|:----------|
-|1.0    |Modulidentifikation erstellt |W. Odermatt       |27.11.2019 |
+## Contributing
 
-## Beitragen
+This is a personal learning project for me. Please feel free to fork this repo. Pull request to submit more programs.
 
-Dies ist ein persönliches Lernprojekt für mich.
+## Feedback
 
-Bitte fühlen Sie sich frei, dieses Repo zu forken. Pull-Request, um weitere Programme einzureichen.
+If you find any bug or have any suggestion, please do file issues. I am graceful for any feedback and will do my best to improve this package.
+
+## License
+
+[MIT](LICENSE) © 2020 Ioannis Christodoulakis

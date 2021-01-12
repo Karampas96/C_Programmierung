@@ -1,10 +1,11 @@
-/* array1.c */
+/* array_2.c */
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(void)
-{
-	int i[5]; /* Array mit 5 int-Elementen */
+int main(void){
+
+	/* Array mit 5 int-Elementen */
+	int i[5]; 
 	
 	/* Wertzuweisungen des Arrays */
 	i[0] = 5;
@@ -26,4 +27,4 @@ int main(void)
 	//printf("Array-Element i[6]=%d\n", i[6]);
 	
 	return EXIT_SUCCESS;
-} //main
+}

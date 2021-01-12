@@ -1,9 +1,9 @@
-/* Pointers.c */
+/* pointers_1.c */
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(void)
-{
+int main(void){
+
 	int x=5;
 	int *p;
 	
@@ -15,7 +15,6 @@ int main(void)
 	p = &x;
 	
 	printf("Der Wert von p ist %p \n", p);
-	
 	printf("Der Wert von *p ist %d \n", *p);
 	
 	*p = 10;
@@ -23,4 +22,4 @@ int main(void)
 	printf("Der Wert von x ist %d \n", x);
 	
 	return EXIT_SUCCESS;
-} //main
+}

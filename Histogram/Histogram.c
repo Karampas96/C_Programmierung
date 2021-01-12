@@ -1,6 +1,3 @@
-// Histogram1.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <string.h>
 #include <stdio.h>
 #include <errno.h>
@@ -15,7 +12,6 @@ uint32_t histogram[256];
 const char *path = "C:\\Users\\rolfl\\OneDrive - GIBZ\\HFIE\\StrukturierteProgrammierung\\Übungsmaterial\\";
 char pathBuffer[1024];
 
-//int main()
 int main(int argc, const char *args[], const char *envP[])
 {
 	
@@ -84,7 +80,3 @@ uint32_t FindMaxFrequentElement(const uint32_t* histogram, uint32_t size, uint32
 	}
 	return maxCount;
 }
-
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
