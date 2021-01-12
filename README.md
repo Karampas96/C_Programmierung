@@ -81,10 +81,6 @@ Problemstellung analysieren und mit geeigneten Datenstrukturen und Algorithmen e
 * Kennt die Bedeutung von Grenzwerten beim Testen und kann an Beispielen aufzeigen, wie damit die Korrektheit von Bedingungen in Programmen nachgewiesen werden kann.
 * Kennt den Aufbau eines Testprotokolls und kann an Beispielen aufzeigen, welche Ziele mit dem Testprotokoll verfolgt werden (Was, wann, von wem, wie intensiv und mit welchem Ergebnis getestet).
 
-|Vers.: |Bemerkungen:                 |Verantwortlicher: |Datum:     |
-|:------|:----------------------------|:-----------------|:----------|
-|1.0    |Modulidentifikation erstellt |W. Odermatt       |27.11.2019 |
-
 ## Beitragen
 
 Dies ist ein persönliches Lernprojekt für mich.
