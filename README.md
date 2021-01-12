@@ -7,7 +7,7 @@
 
 Kleine Projekte in der Programmiersprache C.
 
-## Liste der Programme
+## List of Python Exercises
 
 * [ASCII-Zeichensatz](https://github.com/YodaCh96/C-Programmierung/tree/master/ASCII-Zeichensatz)
 * [Bubblesort](https://github.com/YodaCh96/C-Programmierung/tree/master/Bubblesort)
