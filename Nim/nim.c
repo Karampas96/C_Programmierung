@@ -21,20 +21,22 @@ void showWinner(const char *winner);
 void AI(int *zeilearray, int *zug);
 
 int main(){
-    char answer[5];
+    char answer[100];
     introGame();
     printf("\nDo you want to play with me? yes/no: ");
     scanf("%s", answer);
-
-    if (strcmp(answer, "yes") == 0){
+    
+    
+    if ((strcmp(answer, "yes") == 0) || (strcmp(answer, "y") == 0)){
         playWithYoda();
     }
-    else if (strcmp(answer, "no") == 0){
+    else if ((strcmp(answer, "no") == 0) || (strcmp(answer, "n") == 0)){
         printf("\nGoodbye...\n");
     }
     else{
         printf("\nInvalid answer...\n");
     }
+
     system ("PAUSE"); /* Nur waehrend der Entwicklungsphase, spaeter loeschen! */
     return 0;
 }
