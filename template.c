@@ -52,7 +52,7 @@ int main(void) {
   /* Eingabe ------------------------------ */
 
 
-  /* Verarbeitung und Ausgabe ------------- */
+  /* Verarbeitung ------------------------- */
 
 
   /* Ausgabe ------------------------------ */

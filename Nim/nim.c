@@ -1,7 +1,39 @@
-#include<stdio.h>
-#include<string.h>
-#include <time.h> // initialisierung des Zufallsgenerators
+/*******************************************************************************
+* Programm:   Nim Game
+* Filename:   nim.c
+*
+* Autor:      Ioannis Christodoulakis (IC)
+* Version:    1.0
+* Datum:      13.01.2021
+*
+* Entwicklungsablauf(Version, Datum, Autor, Entwicklungsschritt, Zeit):
+* 1.0
+*
+********************************************************************************
+*
+* Verwendungszweck: C-Schulung
+*
+* Beschreibung:
+*
+* Precondition:  -
+*
+* Postcondition: -
+*
+* Benötigte Libraries:
+*
+* - stdio.h
+* - string.h
+* - time.h
+*
+* Copyright (c) 2020 by I.Christodoulakis, CH-6340 Baar
+*******************************************************************************/
 
+/***  Include Files ***********************************************************/
+#include <stdio.h>  /* Funktionsbibliothek: Standard Ein- Ausgabe */
+#include <string.h>
+#include <time.h> /* initialisierung des Zufallsgenerators */
+
+/***  Globale Deklarationen und Definitionen **********************************/
 #define MAX_ZEILEN 4
 #define MAX_STAEBCHEN 7
 #define GAME_OBJ '|'
@@ -11,6 +43,7 @@
 #define ROW_CHOICE "\n\nAus welcher Zeile sollen Staebchen genommen werden: "
 #define REMOVE_COUNT "\nWie viele Staebchen sollen entfernt werden: "
 
+/***  Funktions-Deklarationen *************************************************/
 void introGame();
 void initGame(int *zeilearray);
 void displayGame(const int *zeilearray, const char gameObj);
@@ -20,12 +53,17 @@ short endOfGame(const int *zeilearray);
 void showWinner(const char *winner);
 void AI(int *zeilearray, int *zug);
 
+/*******************************************************************************
+******************************* HAUPTPROGRAMM **********************************
+*******************************************************************************/
 int main(){
+    // lokale Variablen
     char answer[100];
+    /* Intro -------------------------------- */
     introGame();
+    /* Eingabe ------------------------------ */
     printf("\nDo you want to play with me? yes/no: ");
     scanf("%s", answer);
-    
     
     if ((strcmp(answer, "yes") == 0) || (strcmp(answer, "y") == 0)){
         playWithYoda();
@@ -36,8 +74,8 @@ int main(){
     else{
         printf("\nInvalid answer...\n");
     }
-
-    system ("PAUSE"); /* Nur waehrend der Entwicklungsphase, spaeter loeschen! */
+    /* Nur waehrend der Entwicklungsphase, spaeter loeschen! */
+    system ("PAUSE");
     return 0;
 }
 
@@ -88,6 +126,7 @@ void playWithYoda(){
     short player = 1;
     char gameObj = GAME_OBJ;
     initGame(zeilearray);
+    /* Verarbeitung ------------------------- */
     do {
         int zug[2]; // zug[0]: entf. Zeile, zug[1]: entf. Staebchen
         system("cls");
@@ -110,6 +149,7 @@ void playWithYoda(){
             player = (player == 1)? 2 : 1;
         }
     } while(endOfGame(zeilearray) != 1);
+    /* Ausgabe ------------------------------ */
     if(player == 2){
         showWinner("You");
     }
