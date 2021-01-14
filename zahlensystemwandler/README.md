@@ -2,7 +2,7 @@
 
 ## 1 Einleitung
 
-Sehr oft von grossem Vorteil, wenn ein Taschenrechner zur Verfügung steht, welcher Dezimalzahlen in ein anderes Zahlensystem umrechnen kann. So werden z.B. Binärzahlen, Oktalzahlen und auch Hexadezimalzahlen in diversen technischen Dokumentationen immer wider verwendet.
+Sehr oft von grossem Vorteil, wenn ein Taschenrechner zur Verfügung steht, welcher Dezimalzahlen in ein anderes Zahlensystem umrechnen kann. So werden z.B. Binärzahlen, Oktalzahlen und auch Hexadezimalzahlen in diversen technischen Dokumentationen immer wieder verwendet.
 
 Ziel dieser Aufgabe ist es, selber einen solchen "Zahlensystemwandler" zu programmieren.
 

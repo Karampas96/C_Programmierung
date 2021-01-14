@@ -41,7 +41,7 @@
 #define MAX_TRIES 3
 
 /***  Funktions-Deklarationen *************************************************/
-unsigned char Check(unsigned int *pFreischaltcode, const unsigned int *pCode);
+unsigned char Check(unsigned int *pFreischaltcode);
 
 /*******************************************************************************
 ******************************* HAUPTPROGRAMM **********************************
@@ -52,7 +52,7 @@ int main(void)
 	unsigned int freischaltcode; // einzulesender freischaltcode
 	unsigned char result;
 	unsigned char attempt = 0;
-	unsigned int code = 81; // 122121121 or 211212211 etc.
+
 	/* Intro --------------------- */
 	printf("*** Program for checking the unlock code ***\n\n");
 	do
@@ -61,7 +61,7 @@ int main(void)
 		printf("\nPlease enter the unlock code.\n");
 		printf("Code = ");
 		scanf("%d", &freischaltcode);
-	  	result = Check(&freischaltcode, &code);
+	  	result = Check(&freischaltcode);
 	  	attempt = attempt + 1;
 	  	// printf("attempts: %d, result: %d\n", attempt, result);
 	}while(result != 0 && attempt < MAX_TRIES);
@@ -79,25 +79,28 @@ int main(void)
 }
 
 
-unsigned char Check(unsigned int *pFreischaltcode, const unsigned int *pCode)
+unsigned char Check(unsigned int *pFreischaltcode)
 {
-	/* Precondition: */
-	// assert(*pFreischaltcode > 0);
+	//unsigned int code = 10; // 000311225
+	unsigned int code = 81; // 122121121
 	unsigned int pruefwertprodukt = 1;
 	// remove the last digit
   	*pFreischaltcode /= 10;
+	unsigned int r_digits = *pFreischaltcode % 10000;
   	// assign the first 4 digits in l_digits
-  	unsigned char l_digits = *pFreischaltcode / 10000;
+  	unsigned int l_digits = *pFreischaltcode / 10000;
+  	
   	do
 	{
 		// calculate the pruewertprodukt
-  		pruefwertprodukt *= (l_digits % 10 + *pFreischaltcode % 10);
+  		pruefwertprodukt *= (l_digits % 10 + r_digits % 10);
   		// remove the last digit of both variables
   		l_digits /= 10;
-  		*pFreischaltcode /= 10;
-	}while(l_digits > 0);
+  		r_digits /= 10;
+	}while(l_digits > 0 || r_digits > 0);
 	// Check the Freischaltcode
 	// return 0 if the pruefwertprodukt is identical to code
 	// else return 1
-	return (pruefwertprodukt == *pCode) ? 0 : 1;
+	printf("--> %d", pruefwertprodukt);
+	return (pruefwertprodukt == code) ? 0 : 1;
 }
