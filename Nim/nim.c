@@ -93,12 +93,6 @@ void initGame(int *zeilearray){
         // random int between 0 and 7
         zeilearray[i] = rand() % MAX_STAEBCHEN + 1;
     }
-    /*
-    zeilearray[0] = 3;
-    zeilearray[1] = 2;
-    zeilearray[2] = 2;
-    zeilearray[3] = 2;
-    */
 }
 
 void displayGame(const int *zeilearray, const char gameObj){
@@ -117,6 +111,16 @@ void displayGame(const int *zeilearray, const char gameObj){
 void showWinner(const char *winner){
     system("cls");
     printf("The Winner: %s\n", winner);
+}
+
+short endOfGame(const int *zeilearray ){
+    int i;
+    for(i = 0;i < MAX_ZEILEN; i++){
+        if(zeilearray[i] > 0){
+            return 0;
+        }
+    }
+    return 1;
 }
 
 void playWithYoda(){
@@ -174,16 +178,6 @@ int checkInput(const int *zeilearray, const int max, const char* msg, const int 
             }
     }while(invalid == 1);
     return input;
-}
-
-short endOfGame(const int *zeilearray ){
-    int i;
-    for(i = 0;i < MAX_ZEILEN; i++){
-        if(zeilearray[i] > 0){
-            return 0;
-        }
-    }
-    return 1;
 }
 
 void AI(int *zeilearray, int *zug){

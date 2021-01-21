@@ -5,9 +5,9 @@
 
 # C-Programmbeispiele
 
-Kleine Projekte in der Programmiersprache C.
+Kleine Programme in der Programmiersprache C.
 
-## List of Python Exercises
+## List of Python programs
 
 * [ASCII-Zeichensatz](https://github.com/YodaCh96/C-Programmierung/tree/master/ASCII-Zeichensatz)
 * [Bubblesort](https://github.com/YodaCh96/C-Programmierung/tree/master/Bubblesort)
