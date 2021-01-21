@@ -30,13 +30,13 @@
 
 /***  Include Files ***********************************************************/
 #include <stdio.h>  /* Funktionsbibliothek: Standard Ein- Ausgabe */
-#include <string.h>
-#include <time.h> /* initialisierung des Zufallsgenerators */
+#include <string.h> /* String Library */
+#include <time.h> /* Initialisierung des Zufallsgenerators */
 
 /***  Globale Deklarationen und Definitionen **********************************/
-#define MAX_ZEILEN 4
-#define MAX_STAEBCHEN 7
-#define GAME_OBJ '|'
+#define MAX_ZEILEN 4 /* Maximum Reihenanzahl */
+#define MAX_STAEBCHEN 7 /* Maximum Staebchen */
+#define GAME_OBJ '|' /* Darstellung Staebchen */
 #define MINIMUM 1
 #define FLAG 1
 #define ERROR_MSG "\n\nDiese Eingabe ist nicht gueltig\n"
@@ -44,14 +44,14 @@
 #define REMOVE_COUNT "\nWie viele Staebchen sollen entfernt werden: "
 
 /***  Funktions-Deklarationen *************************************************/
-void introGame();
-void initGame(int *zeilearray);
-void displayGame(const int *zeilearray, const char gameObj);
-void playWithYoda();
+void introGame(); /* Spieltitel */
+void initGame(int *zeilearray); /* Initialisierung des Spielbrett erstellen */
+void displayGame(const int *zeilearray, const char gameObj); /* Spielanzeige */
+void playWithYoda(); /* NIM-Logik */
 int checkInput(const int *zeilearray, const int maxLimit, const char* msg, const int rowFlag);
-short endOfGame(const int *zeilearray);
-void showWinner(const char *winner);
-void AI(int *zeilearray, int *zug);
+short endOfGame(const int *zeilearray); /* Baustein welcher Spielende ermittelt */
+void showWinner(const char *winner); /* Gewinnner-Anzeige */
+void AI(int *zeilearray, int *zug); /* Computer-Spiel */
 
 /*******************************************************************************
 ******************************* HAUPTPROGRAMM **********************************
@@ -59,12 +59,15 @@ void AI(int *zeilearray, int *zug);
 int main(){
     // lokale Variablen
     char answer[100];
+
     /* Intro -------------------------------- */
     introGame();
+
     /* Eingabe ------------------------------ */
     printf("\nDo you want to play with me? yes/no: ");
     scanf("%s", answer);
-    
+
+    //Auswertung Eingabe
     if ((strcmp(answer, "yes") == 0) || (strcmp(answer, "y") == 0)){
         playWithYoda();
     }
@@ -74,6 +77,7 @@ int main(){
     else{
         printf("\nInvalid answer...\n");
     }
+
     /* Nur waehrend der Entwicklungsphase, spaeter loeschen! */
     system ("PAUSE");
     return 0;
@@ -98,6 +102,7 @@ void initGame(int *zeilearray){
 void displayGame(const int *zeilearray, const char gameObj){
     int i, j;
     introGame();
+    // Spielanzeigen
     for(i = 0;i < MAX_ZEILEN;i++){
         printf("\nZeile %d (%d): ", i + 1, zeilearray[i]);
         for(j = 0;j < zeilearray[i];j++){
@@ -115,6 +120,7 @@ void showWinner(const char *winner){
 
 short endOfGame(const int *zeilearray ){
     int i;
+    // Spielendenermittlung
     for(i = 0;i < MAX_ZEILEN; i++){
         if(zeilearray[i] > 0){
             return 0;
@@ -153,6 +159,7 @@ void playWithYoda(){
             player = (player == 1)? 2 : 1;
         }
     } while(endOfGame(zeilearray) != 1);
+    
     /* Ausgabe ------------------------------ */
     if(player == 2){
         showWinner("You");
@@ -205,13 +212,6 @@ void AI(int *zeilearray, int *zug){
         if(zeilearray[i] == MINIMUM){
             oneRows++;
         }
-        
-        //printf("\n<<< Zeile %d >>>\n", i+1);
-        //printf("temp: %d\n", temp);
-        //printf("zeroes: %d\n", zeroes);
-        //printf("maxCount: %d\n", maxCount);
-        //printf("zielzeile: %d\n", zielzeile);
-        //printf("oneRows: %d\n", oneRows);
 
         // Es liefert die Anzahl der 2-Potenzen in jeder Zeile
         // z.B. die Zahl 7 = 111 hat ein 4, ein 2 und ein 1
@@ -231,21 +231,14 @@ void AI(int *zeilearray, int *zug){
             powersCount[0]++;
         }
     }
-    
-    //printf("PowerCount2: %d\n", powersCount[2]);
-    //printf("PowerCount1: %d\n", powersCount[1]);
-    //printf("PowerCount0: %d\n", powersCount[0]);
 
     if((powersCount[2] % 2) == 1){
         index = 2;
     } else if((powersCount[1] % 2) == 1){
         index = 1;
     }
-    
-    //printf("Index vor dem for-loop: %d\n", index);
 
     for(i=MAX_ZEILEN-1; i>=0; i--){
-        //printf("Bit array: %d\n", bitArray[i][index]);
         if(bitArray[i][index] == 1){
             zielzeile = i;
             bitArray[i][index] = 0;
@@ -254,8 +247,6 @@ void AI(int *zeilearray, int *zug){
             break;
         }
     }
-    
-    //printf("Index nach dem for-loop: %d\n", index);
 
     while(index >= 0) {
         if((powersCount[index] % 2) == 1) {
@@ -266,11 +257,7 @@ void AI(int *zeilearray, int *zug){
 
     zug[1] = zeilearray[zielzeile];
     
-    //printf("zug[1]: %d, i: %d\n", zug[1], i);
-    
     zeilearray[zielzeile] = bitArray[i][0] * 1 + bitArray[i][1] * 2 + bitArray[i][2] * 4;
-    
-    //printf("zeilearray: %d\n", zeilearray[zielzeile]);
 
     if(maxCount == 1 && zeilearray[zielzeile] != MINIMUM){
         oneRows--;
@@ -286,8 +273,6 @@ void AI(int *zeilearray, int *zug){
     if((zeroes + oneRows) == MAX_ZEILEN && oneRows % 2 == 1 && maxCount != MINIMUM){
         zeilearray[zielzeile] == 0 ? ++zeilearray[zielzeile] : --zeilearray[zielzeile];
     }
-    
-    //printf("zeilearray: %d\n", zeilearray[zielzeile]);
 
     // Gib die entfernte Zeile zurueck
     zug[0] = zielzeile;

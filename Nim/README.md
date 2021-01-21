@@ -27,25 +27,14 @@ Ein NIM Spiel soll als Console-Applikation entwickelt werden. Dabei sollen diese
 Für die Implementierung des Spiels brauchen Sie vermutlich diese Header-Includes:
 
 ```c
-#include <stdio.h> // rpintf, scanf 
-#include <stdint.h> // int32_t 
-#include <stdlib.h> // rand() 
-#include <time.h> // initialisierung des Zufallsgenerators
+#include <stdio.h>  /* Funktionsbibliothek: Standard Ein- Ausgabe */
+#include <string.h> /* String Library */
+#include <time.h> /* Initialisierung des Zufallsgenerators */
 ```
 
 ### User Input
 
-Für das Lesen von Benutzereingaben können Sie die Funktion `scanf_s` verwenden. Ein Beispiel, wie diese Funktion verwendet wird, finden Sie in der nachfolgenden Abbildung.
-
-```c
-int32_t ReadNumber()
-{ 
-    int32_t number;
-    scanf_s("%i", &number);
-    while (getchar() != '\n'); // this is needed to clear the buffer!
-    return number;
-}
-```
+Für das Lesen von Benutzereingaben können Sie die Funktion `scanf` verwenden. Ein Beispiel, wie diese Funktion verwendet wird, finden Sie in der nachfolgenden Abbildung.
 
 Wenn Sie nur eine einzelne Zahl lesen wollen, können Sie diese Funktion verwenden.
 
@@ -53,17 +42,45 @@ Wenn Sie nur eine einzelne Zahl lesen wollen, können Sie diese Funktion verwend
 
 ### Analyse
 
-- Zeichnen Sie ein UML Aktivitäts-Diagramm, welches den Ablauf und die einzelnen Schritte des Spiels zeigt. Überlegen Sie sich, welche Aktionen sie in weitere Aktionen aufteilen möchten.
+- Zeichnen Sie ein UML Aktivitäts-Diagramm bzw. Struktogramm, welches den Ablauf und die einzelnen Schritte des Spiels zeigt. Überlegen Sie sich, welche Aktionen sie in weitere Aktionen aufteilen möchten.
 - Überlegen Sie sich, welche Daten Sie brauchen, um den Zustand des Spiels festzuhalten.
 - Definieren Sie eine Reihenfolge, in welcher Reihenfolge Sie die Funktionen implementieren und testen.
 - Definieren Sie, wie/ob Sie die einzelnen Funktionen testen (z.B. Bei der Anzeigefunktion sehen sie sofort, wenn etwas nicht stimmt. Das könne Sie so festhalten und sagen, dass sie das nicht ausdrücklich testen)
 
+#### Struktogramm
+
+![main](imgs/main.png)
+![displayGame](imgs/displayGame.png)
+![initGame](imgs/initGame.png)
+![introGame](imgs/introGame.png)
+![playWithYoda](imgs/playWithYoda.png)
+![endOfGame](imgs/endOfGame.png)
+![showWinner](imgs/showWinner.png)
+![checkInput](imgs/checkInput.png)
+![AI](imgs/AI.png)
+
 ### Implementierung
 
-- Definieren Sie für die alle Aktionen c-Funktionen
+- Definieren Sie für die alle Aktionen C-Funktionen
+
+```c
+void introGame();
+void initGame(int *zeilearray);
+void displayGame(const int *zeilearray, const char gameObj);
+void playWithYoda();
+int checkInput(const int *zeilearray, const int maxLimit, const char* msg, const int rowFlag);
+short endOfGame(const int *zeilearray);
+void showWinner(const char *winner);
+void AI(int *zeilearray, int *zug);
+```
+
 - Definieren Sie geeignete Datenstrukturen
 - Definieren Sie die entsprechenden Variablen, um den Spielstatus zu speichern.
 - Implementieren und testen Sie die Funktionen gemäss Ihres Plans.
+
+### Testen
+
+Ich habe alle Schritte mit der Konsole geprüft, um alle Testfälle zu testen. Meine erste Idee war, dass der Code mit einem `yml-file` automatisch getestet werden könnte, aber aus zeitlichen Gründen was es nicht möglich.
 
 ### Source Code Verwaltung und Hilfestellungen
 
