@@ -1,7 +1,7 @@
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FYodaCh96%2FC-Programmierung&count_bg=%2339B230&title_bg=%23055C60&icon=&icon_color=%23DF2323&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
-![Lines of code](https://img.shields.io/tokei/lines/github/YodaCh96/C-Programmierung)
-![GitHub issues](https://img.shields.io/github/issues-raw/YodaCh96/C-Programmierung)
-![GitHub](https://img.shields.io/github/license/YodaCh96/C-Programmierung)
+![Lines of code](https://img.shields.io/tokei/lines/github/YodaCh96/C)
+![GitHub issues](https://img.shields.io/github/issues-raw/YodaCh96/C)
+![GitHub](https://img.shields.io/github/license/YodaCh96/C)
 
 # C-Programmbeispiele
 
