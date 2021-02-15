@@ -1,6 +1,6 @@
 # Bubblesort
 
-![Bubblesort](images/Bubblesort.png)
+![Bubblesort](images/bubblesort.png)
 
 ## 1 Einleitung
 
