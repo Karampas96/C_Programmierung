@@ -101,6 +101,5 @@ unsigned char Check(unsigned int *pFreischaltcode)
 	// Check the Freischaltcode
 	// return 0 if the pruefwertprodukt is identical to code
 	// else return 1
-	printf("--> %d", pruefwertprodukt);
 	return (pruefwertprodukt == code) ? 0 : 1;
 }

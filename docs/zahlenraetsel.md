@@ -4,7 +4,7 @@
 
 In verschiedenen Zeitschriften werden Rätsel publiziert. In solchen Rätseln geht es darum, jedes Symbol durch eine Ziffer zu ersetzen. Dabei bedeuten gleiche Symbole auch die gleichen Ziffern. Sind alle Zahlen am richtigen Ort eingesetzt, dann müssen die horizontalen wie auch die vertikalen Rechnungen aufgehen.
 
-![Zahlenrätsel](images/Zahlenraetsel.PNG)
+![Zahlenrätsel](images/zahlenraetsel.PNG)
 
 ## 2 Aufgabenstellung
 

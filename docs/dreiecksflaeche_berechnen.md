@@ -13,7 +13,7 @@ Mit dieser Aufgabe soll ein kleines, vollständiges Programm zur Dreiecksberechn
 
 Von einem beliebigen Dreieck kann die Fläche aus den drei Seiten wie folgt berechnet werden:
 
-![Berechnung](images/Berechnung.PNG)
+![Berechnung](images/berechnung.PNG)
 
 Erstellen Sie ein kleines, vollständiges Programm, welches die drei Seiten einliest und dann daraus die Fläche berechnet und formatiert ausgibt!
 
