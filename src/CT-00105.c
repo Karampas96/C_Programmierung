@@ -44,10 +44,12 @@ int main() {
   scanf("%d", &year);
 
   /* Verarbeitung und Ausgabe-------------- */
-  if (((year % 4 == 0) && (year % 100!= 0)) || (year % 400 == 0))
+  if (((year % 4 == 0) && (year % 100!= 0)) || (year % 400 == 0)){
     printf("%d ist ein Schaltjahr.", year);
-  else
+  }
+  else{
     printf("%d ist kein Schaltjahr.", year);
+  }
   
   system ("PAUSE"); /* Nur während der Entwicklungsphase, später löschen! */
   return (0);
