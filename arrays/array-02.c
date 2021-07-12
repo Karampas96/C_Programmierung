@@ -1,9 +1,8 @@
-/* array_2.c */
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(void){
-
+int main(void)
+{
 	/* Array mit 5 int-Elementen */
 	int i[5]; 
 	
